@@ -1,0 +1,106 @@
+body {
+    overflow: hidden;
+}
+
+#page-content {
+    border: solid 1px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.card-space {
+    list-style-type: none;
+    margin-bottom: 25px;
+    margin-right: 50px;
+    border: solid 1px black;
+    color: purple;
+    display: flex;
+    width: 500px;
+    height: 250px;
+}
+
+header {
+    padding: 10px;
+    border-bottom: solid 1px;
+    background-color: rebeccapurple;
+}
+
+.card-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    max-height: 750px;
+}
+
+main .cards {
+    overflow-y: auto;
+}
+
+.card-number {
+    padding: 50px 75px 50px 90px;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    color: purple;
+    font-family: 'Times New Roman', Times, serif;
+    border: solid 2px purple;
+    border-radius: 25%;
+    background-color: transparent;
+}
+
+.card-button .button {
+    border: none
+}
+
+.bar .button {
+    color: white;
+}
+
+.card-number .number {
+    margin: 50px;
+}
+
+.right-part {
+    display: flex;
+    justify-content: center;
+    border-left: solid 1px;
+}
+
+.instr {
+    display: flex;
+    padding: 80px;
+}
+
+.bar {
+    margin-bottom: 5px;
+}
+
+.footer {
+    border-top: solid 1px;
+}
+
+.footer-content {
+    padding-left: 10px;
+}
+
+
+.instr p {
+    width: 40vh;
+    text-align: center;
+}
+
+.text {
+    font-weight: bold;
+    align-self: center;
+}

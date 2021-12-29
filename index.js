@@ -35,6 +35,7 @@ const addCards = () => {
 }
 
 const sortCards = () => {
+    if(cardList.length === 1) return;
     cardList.sort((a, b) => a.value - b.value);
     for(let i = 0; i < cardList.length; i++) {
         let item = document.getElementById(cardList[i].id);
@@ -44,7 +45,6 @@ const sortCards = () => {
 
 const removeCard = (id) => {
     const listItem = document.getElementById(id);
-    let numeberToBeRemoved = + listItem.firstElementChild.firstElementChild.innerHTML;
-    cardList.splice(cardList.indexOf(numeberToBeRemoved), 1);
     listItem.parentNode.removeChild(listItem);
+    cardList.splice(cardList.findIndex(x => x.id == id), 1);
 }

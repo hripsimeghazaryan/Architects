@@ -23,7 +23,7 @@ const addCards = () => {
     const button = document.createElement("button");
     button.className = "button";
     button.innerHTML = "X";
-    button.addEventListener("click", removeCard);
+    button.addEventListener("click", () => removeCard(card.id));
 
     buttonDiv.appendChild(button);
     numberDiv.appendChild(number);
@@ -35,31 +35,15 @@ const addCards = () => {
 }
 
 const sortCards = () => {
-    const list = Array.from(document.querySelectorAll(".card-space"));
-    list.sort((a, b) => a.firstElementChild.firstElementChild.innerHTML - b.firstElementChild.firstElementChild.innerHTML);
     cardList.sort((a, b) => a.value - b.value);
-    for(let i = 0; i < list.length; i++) {
-        document.querySelector(".card-list").appendChild(list[i]);
+    for(let i = 0; i < cardList.length; i++) {
+        let item = document.getElementById(cardList[i].id);
+        document.querySelector(".card-list").appendChild(item);
     }
 }
 
-
-//const xaytarak = () => {
-    // const list = document.querySelectorAll(".card-space");
-    // cardList.sort((a, b) => a.value - b.value);
-    // for(let i = 0; i < cardList.length; i++) {
-    //     for(let j = 0; j < cardList.length; j++) {
-    //         if(cardList[i].value == list[j].firstElementChild.firstElementChild.innerHTML) {
-    //             list[j].parentNode.insertBefore(list[j], list[j].parentNode.lastChild.nextSibling);
-    //             break;
-    //         }
-    //     }
-    // }
-//}
-
-const removeCard = () => {
-    const parentId = event.target.parentNode.parentNode.id;
-    const listItem = document.getElementById(parentId);
+const removeCard = (id) => {
+    const listItem = document.getElementById(id);
     let numeberToBeRemoved = + listItem.firstElementChild.firstElementChild.innerHTML;
     cardList.splice(cardList.indexOf(numeberToBeRemoved), 1);
     listItem.parentNode.removeChild(listItem);

@@ -1,11 +1,15 @@
+html, body {
+    margin: 0;
+    height: 100%
+}
+
 body {
     overflow: hidden;
-    margin: 5px;
 }
 
 #page-content {
     border: solid 1px;
-    height: 99vh;
+    height: 100%;
     display: flex;
     flex-direction: row;
 }
@@ -36,7 +40,7 @@ main {
     display: flex;
     flex-direction: row;
     overflow: hidden;
-    height: 875px;
+    height: 90%;
 }
 
 .cards {
@@ -76,6 +80,7 @@ main {
 }
 
 .footer {
+    height: 100%;
     border-top: solid 1px;
 }
 

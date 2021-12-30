@@ -1,3 +1,8 @@
+html, body {
+    margin: 0;
+    height: 100%
+}
+
 body {
     overflow: hidden;
 }
@@ -9,39 +14,54 @@ body {
     flex-direction: row;
 }
 
-.card-space {
-    list-style-type: none;
-    margin-bottom: 25px;
-    margin-right: 50px;
-    border: solid 1px black;
-    color: purple;
-    display: flex;
-    width: 500px;
-    height: 250px;
+.left-part {
+    width: 80%;
 }
 
 header {
     padding: 10px;
     border-bottom: solid 1px;
-    background-color: rebeccapurple;
+    background-color: #552A7F;
 }
 
-.card-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.button {
+    color: #800080;
+    font-family: 'Times New Roman', Times, serif;
+    border: solid 2px #800080;
+    border-radius: 25%;
+    background-color: transparent;
+}
+
+.bar .button {
+    color: #FFFFFF;
 }
 
 main {
     display: flex;
     flex-direction: row;
     overflow: hidden;
-    max-height: 750px;
+    height: 90%;
 }
 
-main .cards {
+.cards {
     overflow-y: auto;
+}
+
+.card-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.card-space {
+    list-style-type: none;
+    margin: 50px 65px 80px;
+    border: solid 1px;
+    color: #800080;
+    display: flex;
+    width: 500px;
+    height: 250px;
 }
 
 .card-number {
@@ -51,24 +71,32 @@ main .cards {
     justify-content: center;
 }
 
-.button {
-    color: purple;
-    font-family: 'Times New Roman', Times, serif;
-    border: solid 2px purple;
-    border-radius: 25%;
-    background-color: transparent;
+.number {
+    margin: 50px;
 }
 
 .card-button .button {
     border: none
 }
 
-.bar .button {
-    color: white;
+.footer {
+    height: 100%;
+    border-top: solid 1px;
 }
 
-.card-number .number {
-    margin: 50px;
+.footer-content {
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 12px;
+}
+
+.text {
+    font-weight: bold;
+    align-self: center;
 }
 
 .right-part {
@@ -82,25 +110,7 @@ main .cards {
     padding: 80px;
 }
 
-.bar {
-    margin-bottom: 5px;
-}
-
-.footer {
-    border-top: solid 1px;
-}
-
-.footer-content {
-    padding-left: 10px;
-}
-
-
 .instr p {
     width: 40vh;
     text-align: center;
-}
-
-.text {
-    font-weight: bold;
-    align-self: center;
 }
